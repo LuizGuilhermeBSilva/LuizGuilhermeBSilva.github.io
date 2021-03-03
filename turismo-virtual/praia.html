@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Turismo no Brasil</title>
+	<link rel="stylesheet" type="text/css" href="_css\estilo.css">
+	<link rel="stylesheet" type="text/css" href="_css\multimidia.css">
+</head> <!-- Cabeçalho -->
+<script src="_javascript/funcoes.js"></script>
+<body>
+<div id="interface"> <!--Divisão -->
+	<header id="cabecalho"> <!-- Semantica - ID é identificação - Inicio do cabeçalho-->
+	<hgroup> <!-- Semantica - Agrupando os titulos -->
+	<h1> Turismo no Brasil </h1>
+	<h2> A sua viagem virtual</h2>
+	</hgroup>
+
+<figure>
+	<img id="icone" src="_imagens\praia.png"> <!-- imagem Source -->
+</figure>
+
+	<nav id="menu">
+	<h1> Menu Principal </h1>
+		<ol> 
+			<li onmousemove="mudafoto('_imagens/home.png')" onmouseout="mudafoto('_imagens/praia.png')"><a href="index.html" target="_self">Home</a></li>
+			<li onmousemove="mudafoto('_imagens/trilha.png')" onmouseout="mudafoto('_imagens/praia.png')"><a href="trilha.html" target="_self">Trilhas</a></li>
+			<li onmousemove="mudafoto('_imagens/cachoeira.png')" onmouseout="mudafoto('_imagens/praia.png')"><a href="cachoeira.html" target="_self">Cachoeiras</a></li>
+			<li onmousemove="mudafoto('_imagens/praia.png')" onmouseout="mudafoto('_imagens/praia.png')"><a href="praia.html" target="_self">Praia</a></li>
+			<li onmousemove="mudafoto('_imagens/formulario.png')" onmouseout="mudafoto('_imagens/praia.png')"><a href="formulario.html" target="_self">Formulário</a></li>
+		</ol>
+	</nav>
+	</header> <!-- Final do cabeçalho-->
+<section id="corpo-cheio">
+	<article id="noticia">
+		<header id="cabecalho-artigo">
+			<hgroup>
+				<h1> Praias no Brasil </h1>
+				<h2>Produzido por Luiz Guilherme </h2>
+				<h3 class="direita">Atualizado em 01/03/2021 </h3>
+			</hgroup>
+		</header>
+	<div id="tv-radio">
+		<audio id="musica" controls="constrols">
+			<source src="_audio/som_do_mar.mp3" type="audio/mpeg"/>
+			<source src="_audio/som_do_mar.aac" type="audio/x-aac"/>
+			<source src="_audio/som_do_mar.ogg" type="audio/ogg"/>
+			Desculpe,mas não foi possivel carregar o áudio
+		</audio>
+		<video id="filme" controls="constrols" poster="_imagens/capa-melhores-praias.png">
+			<source src="_videos/10-melhores-praias-do-brasil.mp4" type="video/mp4"/>
+			<source src="_videos/10-melhores-praias-do-brasil.webm" type="video/webm"/>
+			<source src="_videos/10-melhores-praias-do-brasil.ogv" type="video/ogg"/>
+			Desculpe,mas não foi possivel carregar o Vídeo
+		</video>
+		
+	</div>
+	<p id="creditos">Creditos do vídeo:<a href="https://www.youtube.com/watch?v=FS3SHw03UFU"> Viagens Cine - https://www.youtube.com/watch?v=FS3SHw03UFU </a>
+	</p>
+	</article>
+</section>
+
+<footer id="rodape">
+<p> Copyright &copy; 2021 - by Luiz Bispo </br>
+<a href="https://www.facebook.com/guilhermelgb12/" target="blank"> Facebook </a>|
+<a href="https://www.instagram.com/l.g2001_/?hl=pt-br" target="blank"> Instagram </a>
+</p>
+</footer>
+</div>
+</body>
+</html>

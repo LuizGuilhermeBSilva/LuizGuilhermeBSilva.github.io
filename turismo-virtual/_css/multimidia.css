@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+div#tv-radio{
+	width: 700px;
+	height: 550px;
+	margin: auto;
+	background: url("../_imagens/tv-aviao.png") no-repeat;
+}
+audio#musica {
+	display: block;
+	position: relative;
+	left:680px;
+	top: 530px;
+	background: #dddddd;
+}
+video#filme{
+	display: block;
+	position: absolute;
+	left: 495px;
+	top: 535px;
+	width: 330px;
+	height: 190px;
+}
+video#filme-index{
+	display: block;
+	position: relative;
+	left: 100px;
+	top: -10px;
+	width: 350px;
+	height: 250px;
+}
+iframe#video-youtube{
+	display: block;
+	position: relative;
+	left: -100px;
+	top: 0px;
+	width: 550px;
+	height: 350px;
+}
+p#creditos{
+	text-align: justify;
+	text-indent: 10px;
+	background-color: rgba(0,0,0,.1);
+	padding: 1px;
+	width: 630px;
+}
+
