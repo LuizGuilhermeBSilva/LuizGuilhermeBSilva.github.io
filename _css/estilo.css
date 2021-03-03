@@ -1,0 +1,226 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@100&display=swap');
+@font-face {
+	font-family: 'fonte-logo';
+	src: url("../_fontes/bubblegum-sans-regular.otf");
+}
+/* Corpo de Texto */
+body{
+	font-family: Arial, sans-serif;
+	background-color: white;
+	color: rgba(0,0,0,1);
+}
+div#interface {
+	width: 1250px;
+	margin: -20px auto 0px auto;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+	padding: 10px;
+}
+p {
+	text-align: justify;
+	text-indent: 50px;
+}
+a {
+	color: #000000;
+	text-decoration: none;
+}
+a:hover {
+	color: red;
+	text-decoration: underline;
+}
+header#cabecalho img#icone{
+	position: absolute;
+	left: 1030px;
+	top: 55px;
+}
+header#cabecalho{
+	border-bottom: 1px #606060 solid;
+	height: 220px;
+	background:	url("../_imagens/logo.png") no-repeat 0px 40px;
+}
+header#cabecalho h1{
+	font-family: 'fonte-logo', sans-serif;
+	font-size: 30pt;
+	color: #606060;
+	text-shadow: 1px 1px 1px rgba(0 ,0 ,0 ,.6);
+	padding: 0px;
+	margin-bottom: 0px;
+}
+
+header#cabecalho h2{
+	font-family:'Truculenta', sans-serif;
+	font-size: 15pt;
+	color: #888888;
+	padding: 0px;
+	margin-top: 0px;
+}
+article#noticia h2{
+	font-size: 12pt;
+	color: #606060;
+	background-color: #dddddd;
+	padding: 5px 0px 5px 10px;
+	margin: 10px 0px 10px 0px;
+}
+header#cabecalho-artigo h1{
+	font-family: "fonte-logo" , sans-serif;
+	font-size: 20pt;
+	color: #606060;
+	margin-bottom: 0px;
+}
+header#cabecalho-artigo h2{
+	font-size: 12pt;
+	color: #cecece;
+	background: #ffffff;
+	margin: 0px;
+}
+header#cabecalho-artigo h3{
+	font-size: 12pt;
+	color: #606060;
+}
+.direita{
+	text-align: right;
+}
+span#referencia {
+	font-family: arial,sans-serif;
+	font-size: 10pt;
+}
+/* Formatação de imagem */
+figure.foto{
+	position: relative;
+	border: 2px solid black;
+	box-shadow: 1px 1px 4px black;
+}
+figure.foto img{
+	width: 50%;
+	height: 50%;
+}
+figure.foto figcaption#hoverr {
+	position: absolute;
+	left: 662px;
+	top: -120px;
+	background-color: rgba(0, 0, 0,.4 );
+	width: 500px;
+	height: 550px;
+	color: black;
+	box-sizing: border-box;
+	opacity: 0;
+	transition: 1s;
+	padding: 10px;
+	font-size: 11pt;
+}
+figure.foto:hover figcaption#hoverr {
+	opacity: 1;
+}
+.fonte {
+	font-size: 9pt;
+	text-align: center;
+}
+figure.legenda figcaption{
+	font-size: 9pt;
+	text-align: center;
+}
+figure.legenda img{
+	position: relative;
+	border: 2px solid black;
+	box-shadow: 1px 1px 4px black;
+	left: 65px;
+}
+/* Formatação do menu */
+nav#menu {
+	display: block;
+}
+nav#menu ol{
+	list-style: none;
+	text-transform: uppercase;
+	position: absolute;
+	top: -15px;
+	left: 700px;
+
+}
+nav#menu li{
+	display: inline-block;
+	background-color: #dddddd;
+	padding: 10px;
+	margin: 2px;
+	-webkit-transition: background-color 1s;
+	-o-transition: background-color 1s;
+	transition: background-color 1s;
+}
+nav#menu li:hover{
+	background-color: #606060;
+
+}
+nav#menu h1{
+	display: none;
+}
+nav#menu a{
+	color: #000000;
+	text-decoration: none;
+}
+nav#menu a:hover{
+	color: #ffffff;
+	text-decoration: underline;
+}
+section#corpo{
+	display: block;
+	width: 650px;
+	float: left;
+	border-right: 1px solid black;
+	padding: 15px;
+}
+aside#lateral{
+	display: block;
+	width: 450px;
+	float: right;
+}
+aside#lateral h2{
+	margin-left: -110px;
+	margin-top: 50px;
+	font-size: 20pt;
+	color: black;
+	font-family: 'fonte-logo',sans-serif;
+}
+aside#lateral p{
+	margin-left: -110px;
+}
+footer#rodape{
+	clear: both; 
+	border-top: 1px solid black;
+}
+footer#rodape p{
+	text-align: center;
+}
+/* Tabela*/
+table#tabelavalor {
+	border: 1px solid #606060;
+	border-spacing: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+table#tabelavalor td {
+	border: 1px solid #606060;
+	padding: 5px;
+	text-align: center;
+	vertical-align: middle;	
+}
+table#tabelavalor td.ce {
+	text-align: left;
+}
+table#tabelavalor caption {
+	color: black;
+	font-size: 15pt;
+	font-weight: bolder;
+}
+table#tabelavalor caption span{
+	display: block;
+	float: right;
+	color: black;
+	font-size: 8pt;
+	margin-top: 10px;
+}
+table#tabelavalor caption#autor {
+	font-size: 9pt;
+	text-align: center;
+	font-weight: normal;
+}
+

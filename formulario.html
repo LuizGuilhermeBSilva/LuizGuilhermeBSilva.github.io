@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Turismo no Brasil</title>
+	<link rel="stylesheet" type="text/css" href="_css\estilo.css">
+	<link rel="stylesheet" type="text/css" href="_css\form.css">
+</head> <!-- Cabeçalho -->
+<script src="_javascript/funcoes.js"></script>
+<script>
+	function calc_total(){
+		var quantidade=parseFloat(document.getElementById("quant").value);
+		var pessoas=parseInt(document.getElementById("qtd").value);
+		total=((quantidade*0.11)+(quantidade*0.0184))*pessoas;
+		document.getElementById("valtotal").value = total.toFixed(2);
+	}
+</script>
+<body>
+<div id="interface"> <!--Divisão -->
+	<header id="cabecalho"> <!-- Semantica - ID é identificação - Inicio do cabeçalho-->
+	<hgroup> <!-- Semantica - Agrupando os titulos -->
+	<h1> Turismo no Brasil </h1>
+	<h2> A sua viagem virtual</h2>
+	</hgroup>
+
+<figure>
+	<img id="icone" src="_imagens\formulario.png"> <!-- imagem Source -->
+</figure>
+
+	<nav id="menu">
+	<h1> Menu Principal </h1>
+		<ol> 
+			<li onmousemove="mudafoto('_imagens/home.png')" onmouseout="mudafoto('_imagens/formulario.png')"><a href="index.html" target="_self">Home</a></li>
+			<li onmousemove="mudafoto('_imagens/trilha.png')" onmouseout="mudafoto('_imagens/formulario.png')"><a href="trilha.html" target="_self">Trilhas</a></li>
+			<li onmousemove="mudafoto('_imagens/cachoeira.png')" onmouseout="mudafoto('_imagens/formulario.png')"><a href="cachoeira.html" target="_self">Cachoeiras</a></li>
+			<li onmousemove="mudafoto('_imagens/praia.png')" onmouseout="mudafoto('_imagens/formulario.png')"><a href="praia.html" target="_self">Praia</a></li>
+			<li onmousemove="mudafoto('_imagens/formulario.png')" onmouseout="mudafoto('_imagens/formulario.png')"><a href="formulario.html" target="_self">Formulário</a></li>
+		</ol>
+	</nav>
+	</header> <!-- Final do cabeçalho-->
+<section id="corpo-cheio">
+	<article id="noticia">
+		<header id="cabecalho-artigo">
+			<hgroup>
+				<h1>Formulário</h1>
+				<h2>Produzido por Luiz Guilherme </h2>
+				<h3 class="direita">Atualizado em 01/03/2021 </h3>
+			</hgroup>
+		</header>
+		<form method="post" id="formulario" action="https://formspree.io/guillherme_lgb12@hotmail.com" oninput="calc_total();">
+			<fieldset id="usuario"><legend>Identificação do Usuário</legend>
+				<p><label for="nome">Nome:</label><input type="text" name="caixa-nome" id="nome" size="30" maxlength="30" placeholder="Nome Completo"></p>
+				<p><label for="senha">Senha:</label><input type="password" name="caixa-senha" id="senha" size="8" maxlength="8" placeholder="8 Dígitos"></p>	
+				<p><label for="email">E-mail:</label><input type="email" name="caixa-email" id="email" size="20" maxlength="40" placeholder="Email"></p>
+				<fieldset id="sexo"><legend>Sexo:</legend>
+					<input type="radio" name="caixa-sexo" id="masc"><label for="masc">Masculino </label><br/>
+					<input type="radio" name="caixa-sexo" id="fem"><label for="fem">Feminino </label>
+				</fieldset>
+				<p><label for="data">Data de Nascimento:</label><input type="date" name="caixa-data" id="data"><p>
+			</fieldset>
+			<fieldset id="endereco"><legend>Endereço do Usuário </legend>
+				<p><label for="endereco">Logradouro:</label><input type="text" name="caixa-texto" id="logradouro" size="30" maxlength="30" placeholder="Rua,Avenida,rodovia..."></p>
+				<p><label for="numero-casa">Número:</label><input type="number" name="caixa-numero" id="numero-casa" min="0" max="999999"></p>
+				<p><label for="estado">Estado:</label>
+					<select name="caixa-estado" id="estado">
+						<!-- <optgroup></optgroup> Caixa de grupo-->
+						<option>Acre (AC)</option>
+						<option>Alagoas (AL)</option>
+						<option>Amapá (AP)</option>
+						<option>Amazonas (AM)</option>
+						<option>Bahia (BA)</option>
+						<option>Ceará (CE)</option>
+						<option>Distrito Federal (DF)</option>
+						<option>Espírito Santo (ES)</option>
+						<option>Goiás (GO)</option>
+						<option>Maranhão (MA)</option>
+						<option>Mato Grosso (MT)</option>
+						<option>Mato Grosso do Sul (MS)</option>
+						<option>Minas Gerais (MG)</option>
+						<option>Pará (PA)</option>
+						<option>Paraíba (PB)</option>
+						<option>Paraná (PR)</option>
+						<option>Pernambuco (PE)</option>
+						<option>Piauí (PI)</option>
+						<option>Rio de Janeiro (RJ)</option>
+						<option>Rio Grande do Norte (RN)</option>
+						<option>Rio Grande do Sul (RS)</option>
+						<option>Rondônia (RO)</option>
+						<option>Roraima (RR)</option>
+						<option>Santa Catarina (SC)</option>
+						<option>São Paulo (SP)</option>
+						<option>Sergipe (SE)</option>
+						<option>Tocantins (TO)</option>
+					</select>
+			</p>
+			<p><label for="cidade">Cidade:</label>
+				<input type="text" name="caixa-cidade" id="cidade" maxlength="20" size="20" placeholder="Sua cidade" list="cidades">
+				<datalist id="cidades">
+					<option value="Rio Branco"></option>
+					<option value="Maceió"></option>
+					<option value="Macapá"></option>
+					<option value="Manaus"></option>
+					<option value="Salvador"></option>
+					<option value="Fortaleza"></option>
+					<option value="Brasília"></option>
+					<option value="Vitória"></option>
+					<option value="Goiânia"></option>
+					<option value="São Luís"></option>
+					<option value="Cuiabá"></option>
+					<option value="Campo Grande"></option>
+					<option value="Belo Horizonte"></option>
+					<option value="Belém"></option>
+					<option value="João Pessoa"></option>
+					<option value="Curitiba"></option>
+					<option value="Recife"></option>
+					<option value="Teresina"></option>
+					<option value="Rio de Janeiro"></option>
+					<option value="Natal"></option>
+					<option value="Porto Alegre"></option>
+					<option value="Porto Velho"></option>
+					<option value="Boa Vista"></option>
+					<option value="Florianópolis"></option>
+					<option value="São Paulo"></option>
+					<option value="Aracaju"></option>
+					<option value="Palmas"></option>
+				</datalist>
+			</p>
+			</fieldset>
+			<fieldset id="mensagem"><legend>Mensagem do Usuário </legend>
+				<p><label for="grau">Grau de Urgência: 
+					Mínimo<input type="range" name="caixa-grau" id="grau" min="0" max="10" step="2">Máximo
+				</label></p>
+				<p><label for="areatexto">Mensagem:
+						<textarea name="caixa-texto-grande" id="areatexto" cols="25" rows="3"></textarea>
+				</label></p>
+
+			</fieldset>
+			<fieldset id="pedido"><legend>Gostaria de fazer um orçamento</legend>
+				<p> <input type="checkbox" name="caixa-pedido" id="pedido" checked>
+				<label for="pedido">Quero fazer um orçamento e ver uma data disponível para a viagem</label></p>
+				<p><label for="qtd">Quantidade de pessoas:</label>
+					<input type="number" name="caixa-numero" id="qtd" min="0" max="10" value="1"></p>
+				<p><label for="quant">Quilometros a serem viajados:</label>
+					<input type="number" name="caixa-numero" id="quant" min="0" max="99999" value="1000">Km</p>
+				<p><label for="valtoral">Preço Total aproximado: R$</label>
+					<input type="text" name="caixa-total" id="valtotal" placeholder="Valor total a pagar" readonly size="12">
+					<a id="legenda"></br>*Somente Ida*</a></p>
+			</fieldset>
+			<input type="submit" id="botao" value="">
+		</form>
+	</article>
+</section>
+
+<footer id="rodape">
+<p> Copyright &copy; 2021 - by Luiz Bispo </br>
+<a href="https://www.facebook.com/guilhermelgb12/" target="blank"> Facebook </a>|
+<a href="https://www.instagram.com/l.g2001_/?hl=pt-br" target="blank"> Instagram </a>
+</p>
+</footer>
+</div>
+</body>
+</html>
